@@ -1,0 +1,26 @@
+mixin steps()
+  section.steps#steps
+    .container
+      .steps__title.title
+        h2!="3 ШАГА"
+        p!="для переезда на VINTEO с запрещенных/закрытых аналогов"
+      ul.steps__list
+        li.steps__item
+          .steps__item-number
+            +icon("icon-step-1", 18, 38)
+          .steps__item-text
+            h3.steps__item-title!="Установите сервер"
+            p.steps__text!="Выделите ресурсы в своём ЦОД и установите сервер с флешки."
+        li.steps__item
+          .steps__item-number
+            +icon("icon-step-2", 31, 39)
+          .steps__item-text
+            h3.steps__item-title!="Сгенерируйте ключ"
+            p.steps__text!="В меню сервера сгенерируйте файл запроса временных ключей."
+        li.steps__item
+          .steps__item-number
+            +icon("icon-step-3", 31, 39)
+          .steps__item-text
+            h3.steps__item-title!="Всё готово"
+            p.steps__text!="Загрузите полученый лицензионный файл в меню сервера."
+      +btn({text: "Получить консультацию"}).steps__button(data-open-modal="consulting")

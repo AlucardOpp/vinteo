@@ -1,0 +1,16 @@
+mixin modal-consulting()
+  .title.title--small
+    h2 Горячая линия
+    p заполните форму — мы с вами свяжемся в&nbsp;кратчайшие сроки
+  .form.form--consulting(data-validate)
+    form(method="post")
+      +custom-input({inputLabel: "ФИО*", inputError: "Заполните поле", inputName: "consult-user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="name").form__item.form__item--full
+      +custom-input({inputLabel: "Организация*", inputError: "Заполните поле", inputName: "consult-user-company", inputMinLength: "2"})(data-validate-type="text", data-limitations="name").form__item.form__item--half-1
+      +custom-input({inputLabel: "Должность*", inputError: "Заполните поле", inputName: "consult-user-position", inputMinLength: "2"})(data-validate-type="text", data-limitations="name").form__item.form__item--half-2
+      +custom-input({inputType: "tel",inputLabel: "Телефон*", inputError: "Не корректный телефон", inputName: "consult-user-phone"})(data-validate-type="phone").form__item.form__item--half-1
+      +custom-input({inputType: "email", inputLabel: "E-mail*", inputError: "Не корректный email", inputName: "consult-user-email"})(data-validate-type="email").form__item.form__item--half-2
+      +custom-textarea({inputLabel: "Опишите задачу*", inputError: "Заполните поле", inputName: "consult-user-info"})(data-validate-type="text", data-validate-limitations="letters-and-digit").form__item.form__item--full
+      .form__footer
+        .my-captcha
+        +custom-toggle({inputLabel: "<a href='#' data-open-modal='personal-data' data-close-callback='consulting'>Даю согласие на обработку моих персональных данных</a>", inputError: "Согласие является обязательным", inputName: "consult-user-agreement", inputChecked: true})(data-validate-type="checkbox", data-consent="checkbox").custom-toggle--agreed.form__checkbox
+        +btn({text: 'Отправить', type: 'submit'}).btn--blue.form__submit

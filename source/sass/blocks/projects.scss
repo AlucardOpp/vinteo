@@ -1,0 +1,111 @@
+.projects {
+  margin-bottom: 121px;
+
+  @include vp-1023 {
+    margin-bottom: 70px;
+  }
+
+  &__link {
+    border-radius: 10px;
+    border: 1px solid $color-navy-blue;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transition: opacity $trans-default;
+    overflow: hidden;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__image {
+    margin-left: -1px;
+    width: calc(100% + 2px);
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @include vp-1023 {
+      & img {
+        max-height: 170px;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include vp-1439 {
+      justify-content: center;
+    }
+
+    @media (max-width: 1259px) {
+      justify-content: flex-start;
+    }
+
+    @include vp-1023 {
+      justify-content: center;
+    }
+
+    @media (max-width: 965px) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__item {
+    display: block;
+    width: 376px;
+    height: auto;
+
+    @include vp-1023 {
+      width: 280px;
+    }
+  }
+
+  &__text-content {
+    padding: 64px 16px 40px;
+    display: flex;
+    flex-direction: column;
+
+    @include vp-1023 {
+      padding: 20px 16px 20px;
+    }
+  }
+
+  &__item-title {
+    margin: 0 0 23px 0;
+
+    min-height: 78px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+    color: $color-black-russian-2;
+
+    @include vp-1023 {
+      font-size: 16px;
+      margin-bottom: 13px;
+    }
+  }
+
+  &__item-text {
+    margin: auto 0 0 0;
+    color: $color-nepal-2;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

@@ -1,0 +1,44 @@
+.btn {
+  display: flex;
+  margin: 0;
+  padding: 12px 24px;
+
+  color: $color-default-white;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  background-color: $color-neon-carrot;
+  border-radius: 40px;
+  box-shadow: 0 3px 7px $color-black-russian-3;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  transition: opacity $trans-default;
+
+  &--red {
+    background-color: $color-torch-red;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &--blue {
+    padding: 12px 19px;
+    font-weight: 500;
+    text-transform: none;
+    box-shadow: 0px 10px 20px rgba($color-default-black, 0.3);
+    background-color: $color-navy-blue;
+    border-radius: 5px;
+  }
+}

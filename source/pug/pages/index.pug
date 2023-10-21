@@ -1,0 +1,36 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Российский аналог видеоконференцсвязи Vinteo на замену отключенным Cisco, Polycom, Avaya, Webex" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = false
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  main
+    +intro()
+    +platform()
+    +advantages()
+    +guarantees()
+    +steps()
+    +projects()
+    +clients()
+    +questions()
+
+
+block modals
+  +modal("modal--personal-data")(data-modal="personal-data")
+    +modal-personal-data()
+  +modal("modal--consulting")(data-modal="consulting")
+    +modal-consulting()
+  +modal("modal--success modal--fit-content")(data-modal="success")
+    +modal-success()
+  +modal("modal--success modal--fit-content")(data-modal="success-faq")
+    +modal-success-faq()
+  +modal("modal--success modal--fit-content")(data-modal="success-consulting")
+    +modal-success-consulting()
+  +modal("modal--consulting")(data-modal="trial")
+    +modal-trial()

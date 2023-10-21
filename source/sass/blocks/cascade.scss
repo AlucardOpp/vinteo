@@ -1,0 +1,57 @@
+.cascade {
+  p {
+    margin: 0 0 30px;
+
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $color-black-russian;
+
+    @include vp-1023 {
+      margin-bottom: 10px;
+
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    b {
+      font-weight: 700;
+    }
+  }
+
+  ul {
+    padding: 0 0 0 20px;
+
+
+    // если тестик заметит что цвет не тот
+    // &::before {
+    //   content: "■";
+    //   font-family:"Arial Black";
+    //   font-size: 14px;
+    //   color: $color-black-russian;
+    // }
+
+    li {
+      margin-bottom: 20px;
+
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      color: $color-black-russian;
+
+      list-style-type: square;
+
+      @include vp-1023 {
+        margin-bottom: 12px;
+
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    b {
+      font-weight: 700;
+    }
+  }
+}

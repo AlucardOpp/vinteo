@@ -1,0 +1,68 @@
+mixin intro()
+  -
+    const introContentList = [
+      {
+        href: "#platform",
+        anchor: "platform",
+        text: "Отечественная платформа видеоконференцсвязи VINTEO"
+      },
+      {
+        href: "#advantages",
+        anchor: "advantages",
+        text: "3 преимущества VINTEO перед зарубежными аналогами"
+      },
+      {
+        href: "#guarantees",
+        anchor: "guarantees",
+        text: "Гарантии исправной работы на территории РФ"
+      },
+      {
+        href: "#steps",
+        anchor: "steps",
+        text: "3 простых шага для перехода на VINTEO с запрещённых/закрытых аналогов"
+      },
+      {
+        href: "#projects",
+        anchor: "projects",
+        text: "Проекты и клиенты"
+      },
+      {
+        href: "#questions",
+        anchor: "questions",
+        text: "Частые вопросы"
+      },
+      {
+        href: "#form-faq",
+        anchor: "form-faq",
+        text: "Свяжись с нами"
+      },
+    ]
+
+  section.intro
+    .intro__bg
+      //- +picture("content", "intro-bg", "jpg", 1440, 1024, "")
+      .intro__city
+        +picture('content', 'intro-city', 'png', 1716, 170, "")
+      .intro__grad
+        img(src="img/svg/bg-intro.svg", "width"=1721, "height"=666, alt="")
+    .container
+      .intro__wrap
+        .intro__block
+          .intro__logo
+            +icon("logo", 354, 118)
+          .intro__content-wrap
+            .intro__content
+              p.intro__list-title Содержание:
+              ul.intro__list
+                each item in introContentList
+                  li
+                    a(href=item.href, data-anchor= item.anchor).intro__link
+                      +icon("icon-arrow", 9, 9)
+                      span= item.text
+            .intro__img
+              +picture("content", "no-signal-img", "png", 263, 160, "")
+        .intro__box
+          h1.intro__title Срочная миграция c <span>MCU</span> <span>Cisco</span>, <span>Polycom</span> (Poly), Avaya, Webex …
+          p.intro__desc Российский аналог платформы для видеоконференцсвязи класcа Telepresence
+          +btn({text: "Получить консультацию"}).intro__btn(data-open-modal="consulting")
+

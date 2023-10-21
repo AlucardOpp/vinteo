@@ -1,0 +1,7 @@
+mixin modal-confirm()
+  .title.title--small
+    h2 Пожалуйста, подтвердите отправку
+  .modal__description
+    form
+      .my-captcha
+      +btn({text: 'Подтвердить', type: 'submit'}).btn--blue

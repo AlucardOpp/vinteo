@@ -1,0 +1,11 @@
+mixin form()
+  .form.form--faq(data-validate)
+    form(method="post")
+      +custom-input({inputLabel: "Имя*", inputError: "Заполните поле", inputName: "faq-user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="name").form__item.form__item--third-1
+      +custom-input({inputType: "email", inputLabel: "E-mail*", inputError: "Не корректный email", inputName: "faq-user-email"})(data-validate-type="email").form__item.form__item--third-2
+      +custom-input({inputType: "tel",inputLabel: "Телефон*", inputError: "Не корректный телефон", inputName: "faq-user-phone"})(data-validate-type="phone").form__item.form__item--third-3
+      +custom-textarea({inputLabel: "Вопрос*", inputError: "Заполните поле", inputName: "faq-user-info"})(data-validate-type="text", data-validate-limitations="letters-and-digit").form__item.form__item--full
+      .form__footer
+        .my-captcha
+        +custom-toggle({inputLabel: "<a href='#' data-open-modal='personal-data'>Даю согласие на обработку моих персональных данных</a>", inputError: "Согласие является обязательным", inputName: "faq-user-agreement", inputChecked: true})(data-validate-type="checkbox", data-consent="checkbox").custom-toggle--agreed.form__checkbox
+        +btn({text: 'Отправить', type: 'submit'}).btn--blue.form__submit

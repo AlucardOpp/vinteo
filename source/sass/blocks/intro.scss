@@ -1,0 +1,331 @@
+.intro {
+  position: relative;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    margin-bottom: 70px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: start;
+
+    width: 100%;
+    height: 100%;
+
+    img {
+      height: 100%;
+      width: 101%;
+      max-width: 101%;
+
+      object-position: top;
+    }
+  }
+
+  &__grad {
+    position: relative;
+
+    margin-top: -2px;
+
+    height: 830px;
+
+    @include vp-767 {
+      height: 980px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -55px;
+      left: 0;
+
+      width: 100%;
+      height: 60px;
+
+      background: linear-gradient(0deg, rgba(16,22,44,1) 6%,  rgba(16, 22, 44, 0) 100%);
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__city {
+    height: 200px;
+
+    background: rgba(16,22,44,1);
+
+    img {
+      object-fit: cover;
+
+    }
+  }
+
+  &__city,
+  &__grad {
+    width: 100%;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  // &__bg {
+  //   position: absolute;
+  //   bottom: 2vw;
+  //   left: 0;
+  //   right: 0;
+  //   width: 101%;
+  //   margin: 0 auto;
+  //   overflow: hidden;
+  //   z-index: -1;
+
+  //   @include vp-1439 {
+  //     top: -19vw;
+  //     bottom: unset;
+  //   }
+
+  //   @include vp-767 {
+  //     // top: -340px;
+  //     top: calc(-370px + (-410 - (-370)) * ( (100vw - 370px) / ( 767 - 370) ));
+  //     bottom: 0;
+  //   }
+
+  //   img {
+  //     width: 100%;
+  //     height: 100%;
+  //     object-fit: cover;
+  //     transform: translateX(-0.5vw);
+  //   }
+  // }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: 50.5% 1fr;
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    padding-top: 272px;
+    padding-left: 0;
+
+    @include vp-1439 {
+      padding-top: 18.9vw;
+    }
+
+    @include vp-767 {
+      padding-top: 40px;
+    }
+  }
+
+  &__logo {
+    width: 61.4%;
+    margin-bottom: 242px;
+
+    @include vp-1439 {
+      margin-bottom: calc(172px + (242 - 172) * ( (100vw - 1024px) / ( 1440 - 1024) ));
+    }
+
+    @include vp-767 {
+      position: absolute;
+      top: 30px;
+      left: 16px;
+      max-width: 170px;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__content-wrap {
+    position: relative;
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__list-title {
+    margin: 0;
+    margin-bottom: 17px;
+    font-size: 26px;
+    font-weight: 300;
+  }
+
+  &__list {
+    width: 65.5%;
+    margin: 0;
+    padding: 26px 0 52px 0;
+    background-color: $color-black-russian-2;
+    list-style-type: none;
+
+    @include vp-1023 {
+      width: 75%;
+    }
+
+    @include vp-767 {
+      width: 100%;
+    }
+
+    svg {
+      position: absolute;
+      top: 4px;
+      left: 4.5%;
+      width: 9px;
+      height: 9px;
+    }
+
+    li {
+      margin-bottom: 21px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding: 0 23% 0 11%;
+    color: $color-navy-blue;
+    font-size: 14px;
+    line-height: 1.28;
+    font-weight: 300;
+    letter-spacing: -0.32px;
+    transition: opacity $trans-default;
+
+    span {
+      color: $color-default-white;
+      border-bottom: 1px dashed rgba($color-default-white, 0.3);
+      transition: opacity $trans-default;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 24.8%;
+    right: -2.3%;
+    width: 45.7%;
+
+    @include vp-1023 {
+      top: 34%;
+    }
+
+    @include vp-767 {
+      position: relative;
+      top: unset;
+      right: unset;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__box {
+    max-width: 700px;
+    padding-top: 155px;
+
+    @include vp-1439 {
+      padding-top: 10.8vw;
+    }
+
+    @include vp-767 {
+      padding-top: 100px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 1.16;
+    letter-spacing: -1px;
+
+    @include vp-1439 {
+      font-size: calc(48px + (54 - 48) * ( (100vw - 1024px) / ( 1440 - 1024) ));
+    }
+
+    @include vp-1023 {
+      font-size: calc(36px + (48 - 36) * ( (100vw - 769px) / ( 1023 - 769) ));
+    }
+
+    @include vp-767 {
+      font-size: calc(36px + (48 - 36) * ( (100vw - 320px) / ( 767 - 320) ));
+    }
+
+
+    span {
+      font-weight: 800;
+      font-size: 54px;
+      line-height: 1.16;
+      letter-spacing: -1px;
+      color: $color-navy-blue;
+
+      &:first-child {
+        color: $color-default-white;
+      }
+
+      @include vp-1439 {
+        font-size: calc(48px + (54 - 48) * ( (100vw - 1024px) / ( 1440 - 1024) ));
+      }
+
+      @include vp-1023 {
+        font-size: calc(36px + (48 - 36) * ( (100vw - 769px) / ( 1023 - 769) ));
+      }
+
+      @include vp-767 {
+        font-size: calc(36px + (48 - 36) * ( (100vw - 320px) / ( 767 - 320) ));
+      }
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    margin-bottom: 87px;
+    font-size: 30px;
+    line-height: 1.23;
+    color: rgba($color-default-white, 0.8);
+
+    @include vp-1439 {
+      margin-bottom: calc(37px + (87 - 37) * ( (100vw - 1024px) / ( 1440 - 1024) ));
+      font-size: calc(26px + (30 - 26) * ( (100vw - 1024px) / ( 1440 - 1024) ));
+    }
+
+    @include vp-1023 {
+      margin-bottom: 37px;
+      font-size: calc(21px + (26 - 21) * ( (100vw - 769px) / ( 1023 - 769) ));
+    }
+  }
+}

@@ -1,0 +1,19 @@
+mixin footer(footerMods)
+  footer.footer(class=footerMods)
+    .footer__bg
+      .footer__grad
+        img(src="img/svg/bg-footer.svg", "width"=1721, "height"=666, alt="")
+      .footer__city
+        +picture('content', 'footer-city', 'png', 1716, 170, "")
+    .container
+      .footer__logo
+        +picture('content', 'logo', 'png', 754, 118, 'Vinteo', "")
+      +btn({text: "Получить консультацию"}).footer__btn(data-open-modal="consulting")
+      ul.footer__socials-list
+        li.footer__socials-item
+          a(href="https://t.me/vinteoru", target="_blank", rel="nofollow noopener")
+            .footer__socials-icon
+              +icon('icon-telegram', 35, 35)
+            p Наш канал в telegram
+    a(href="https://platzkart.ru/", target="_blank", rel="nofollow noopener", aria-label="Перейти на www.platzkart.ru").footer__dev
+      +icon('icon-dev', 171, 35)

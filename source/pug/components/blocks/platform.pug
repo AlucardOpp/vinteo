@@ -1,0 +1,15 @@
+mixin platform()
+  section.platform#platform
+    .container
+      .platform__text-content
+        h2.platform__title Отечественная платформа видеоконференцсвязи #[span.platform__subtitle!="VINTEO"]
+        p.platform__text!="С 2005 года производим программное обеспечение и оконечные устройства видеоконференцсвязи (ВКС)."
+        p.platform__experience!="Проектный опыт:"
+        p.platform__text.platform__text--bold!="Верховный Суд РФ: онлайн–заседания"
+        p.platform__text.platform__text--bold!="XXIV Петербургский международный экономический форум"
+        p.platform__text.platform__text--bold!="VI Восточный экономический форум"
+        p.platform__text!="ещё 200+ реализованных проектов"
+        +btn({text: "Получить консультацию"}).platform__button(data-open-modal="consulting")
+      .platform__image
+        +picture("content", "platform", "jpg", 712, 712, "Фоновое изображение")
+        span.platform__image-info!="Источник фото: ПМЭФ’21"

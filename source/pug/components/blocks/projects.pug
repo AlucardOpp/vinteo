@@ -1,0 +1,28 @@
+mixin projects()
+  section.projects#projects
+    .container.swiper
+      .projects__title.title.title--small
+        h2!="Проекты"
+        p!="Масштабные мероприятия с участием VINTEO"
+      ul.projects__list.swiper-wrapper
+        li.projects__item.swiper-slide
+          a(aria-label="Перейти к проекту").projects__link
+            .projects__image
+              +picture("content/projects", "projects-1", "jpg", 376, 250, "Изображения проекта")
+            .projects__text-content
+              h3.projects__item-title!="Верховный Суд РФ: онлайн–заседания"
+              p.projects__item-text!="Первые в стране онлайн-заседания по гражданским делам: 3 судей, 6 дел, 9 участников из разных стран в удаленном режиме"
+        li.projects__item.swiper-slide
+          a(aria-label="Перейти к проекту").projects__link
+            .projects__image
+              +picture("content/projects", "projects-2", "jpg", 376, 250, "Изображения проекта")
+            .projects__text-content
+              h3.projects__item-title!="XXIV Петербургский международный экономический форум"
+              p.projects__item-text!="35 конференций, 26 залов, 200 одновременных подключений участников в каждой конференции"
+        li.projects__item.swiper-slide
+          a(aria-label="Перейти к проекту").projects__link
+            .projects__image
+              +picture("content/projects", "projects-3", "jpg", 376, 250, "Изображения проекта")
+            .projects__text-content
+              h3.projects__item-title!="VI Восточный экономический форум"
+              p.projects__item-text!="40 конференций по 10 часов ежедневно, до 30 одновременных подключений участников в каждой конференции"

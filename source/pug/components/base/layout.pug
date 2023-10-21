@@ -1,0 +1,64 @@
+doctype html
+
+include ../components
+
+block variables
+
+html(lang="ru")
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="yandex-verification", content="a57c02e28dbc4e28")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="description", content="Чем заменить отключенные в России сервисы ВКС? Отечественный аналог Vinteo: условия, описание, гарантии.")
+    //- генерируйте favicon тут - https://realfavicongenerator.net/
+    //- в подключение фавикон манифеста обязательно добавьте строчки crossorigin="use-credentials"
+    link(rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png")
+    link(rel="manifest" href="./favicon/site.webmanifest" crossorigin="use-credentials")
+    link(rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5")
+    link(rel="shortcut icon", href="./favicon/favicon.ico")
+    meta(name="msapplication-TileColor" content="#da532c")
+    meta(name="theme-color" content="#fb8e00")
+    //- используйте только для шрифта находящегося на первом экране
+    link(rel="preload", href="fonts/montserrat-v23-latin_cyrillic-300.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/montserrat-v23-latin_cyrillic-regular.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/montserrat-v23-latin_cyrillic-500.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/montserrat-v23-latin_cyrillic-700.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/montserrat-v23-latin_cyrillic-800.woff2", as="font", crossorigin="anonymous")
+    link(rel="stylesheet", href="css/style.min.css")
+    script.
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-TZZPDC8');
+
+  body
+    noscript.
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZZPDC8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    +sprite()
+    .wrapper(class=wrapperMods)
+      if (hasHeader)
+        +header(headerMods, currentUrl)
+
+      block main
+
+      if (hasFooter)
+        +footer(footerMods)
+
+    block modals
+
+    script(src="js/vendor.min.js")
+    script(src="js/main.min.js")
+    script(src="https://www.google.com/recaptcha/api.js", async, defer)

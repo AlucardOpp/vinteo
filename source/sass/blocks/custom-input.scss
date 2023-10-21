@@ -1,0 +1,117 @@
+.custom-input,
+.custom-textarea {
+  position: relative;
+
+  display: flex;
+  width: 500px;
+  padding: 7px 0;
+
+  label {
+    padding: 21px 9px 13px;
+    width: 100%;
+    min-height: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid $color-pattens-blue;
+    border-radius: 5px;
+
+    transition: border $trans-default;
+
+    &:hover {
+      border: 1px solid rgba($color-default-black, 0.4);
+    }
+
+    &:focus {
+      border: 1px solid rgba($color-default-black, 0.8);
+    }
+
+    &:focus-within .custom-input__label,
+    &:focus-within .custom-textarea__label {
+      font-size: 12px;
+      color: rgba($color-sherpa-blue, 0.5);
+      transform: translateY(-160%);
+    }
+
+    input,
+    textarea {
+      padding: 0;
+      flex-grow: 1;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: -0.32px;
+      color: $color-midnight-express;
+      border: none;
+      outline: none;
+
+      @include vp-767 {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    pointer-events: none;
+    top: 27px;
+    left: 10px;
+    transform: translateY(-50%);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: -0.32px;
+    color: rgba($color-sherpa-blue, 0.7);
+    transition: transform $trans-default, opacity $trans-default, font-size $trans-default;
+  }
+
+  &__error {
+    position: absolute;
+    right: 5px;
+    bottom: 8px;
+    font-size: 12px;
+
+    color: $color-torch-red;
+    pointer-events: none;
+    opacity: 0;
+
+    transition: opacity $trans-default;
+  }
+
+  &.not-empty {
+    .custom-input__label,
+    .custom-textarea__label {
+      font-size: 12px;
+      color: rgba($color-sherpa-blue, 0.5);
+      transform: translateY(-160%);
+    }
+  }
+
+  &.is-invalid {
+    label {
+      border: 1px solid $color-torch-red;
+
+      &:focus,
+      &:hover {
+        border: 1px solid rgba($color-torch-red, 0.5);
+      }
+    }
+
+    .custom-textarea__error,
+    .custom-input__error {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  /*&.is-valid {
+    input {
+      border: 1px solid $color-malachite;
+
+      &:focus,
+      &:hover {
+        border: 1px solid rgba($color-malachite, 0.5);
+      }
+    }
+  }*/
+}

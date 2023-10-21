@@ -1,0 +1,110 @@
+.guarantees {
+  margin-bottom: 150px;
+
+  @include vp-1023 {
+    margin-bottom: 40px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include vp-1023 {
+      margin: 0 auto;
+
+      max-width: 600px;
+      flex-direction: column;
+    }
+  }
+
+  &__list {
+    position: relative;
+
+    max-width: 767px;
+    width: 80%;
+    padding: 40px;
+
+    overflow: hidden;
+
+    @include vp-1023 {
+      width: 100%;
+      padding: 20px 20px 30px;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+    }
+  }
+
+  .cascade {
+    position: relative;
+
+    p {
+      font-size: 20px;
+      line-height: 26px;
+
+      @include vp-1023 {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__description {
+    margin-left: 20px;
+    margin-top: 30px;
+
+    width: 50%;
+
+    @include vp-1023 {
+      margin-left: 0;
+      margin-top: 30px;
+
+      width: 100%;
+    }
+
+    p {
+      margin: 0 0 24px;
+
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+      color: $color-black-russian;
+
+      @include vp-1023 {
+        margin: 0 0 10px;
+
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    span {
+      font-style: italic;
+      font-size: 18px;
+      line-height: 26px;
+      letter-spacing: -0.5px;
+      font-weight: 500;
+      color: $color-nepal;
+
+      @include vp-1023 {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}

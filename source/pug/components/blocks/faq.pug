@@ -1,0 +1,93 @@
+mixin questions()
+  section.questions#questions
+    .container
+      .title.title--small
+        h2 Частые вопросы
+      .faq
+        .faq__accordion(data-accordion='parent')
+          .faq__element(data-accordion='element')
+            h3.faq__button(data-accordion='button')
+              span.faq__button-text Чем грозит моему серверу прекращение работы Cisco на&nbsp;рынке России и&nbsp;Белоруссии?
+              +icon("icon-faq", "19", "19").faq__button-icon
+            .faq__content(data-accordion='content')
+              .faq__wrapper
+                .cascade
+                  p 4&nbsp;марта 2022 года американская компания Cisco Systems сообщила о&nbsp;приостановке всех бизнес-операций на&nbsp;рынках России и&nbsp;Беларуси. Для пользователей это означает:
+                  ul
+                    li Отсутствие технической поддержки.
+                    li Отключение всех пользовательских аккаунтов от&nbsp;tools.cisco.com.
+                    li Невозможность получения любых обновлений и&nbsp;ключей.
+                    li Полная недоступность всех сетевых сервисов для российских абонентов.
+                  p В&nbsp;целом, последствия зависят от&nbsp;используемого продукта и&nbsp;типа лицензирования, который применяется установленными у&nbsp;вас решениями.
+                  p #[b Вариант&nbsp;1.] Если вы&nbsp;использовали Cisco Codian, Cisco TCS, Cisco VCS, CUCM и&nbsp;др., (сервера, где ключи авторизации продукта (PAK) жестко привязаны к&nbsp;оборудованию)&nbsp;&mdash; скорее всего, ПОКА вам ничего не&nbsp;грозит. Однако нам ничего не&nbsp;известно о&nbsp;наличии backdoor-закладок в&nbsp;оборудовании Сisco и&nbsp;их&nbsp;возможностях
+                  p #[b Рекомендации:]
+                  ul
+                    li Сделайте backup конфигураций, включая все ранее полученные на&nbsp;оборудование ключи и&nbsp;прошивки.
+                  p #[b Вариант&nbsp;2.] Если вы&nbsp;использовали облачное лицензирование Smart Account (например, Cisco Webex или лицензии для инфраструктурного оборудования ВКС под виртуальные машины), то&nbsp;его дальнейшее работа невозможна с&nbsp;момента введения санкций&nbsp;&mdash; все лицензии, хранящиеся в&nbsp;депозитарии Smart Account, недоступны.
+                  p #[b Рекомендации:]
+                  p В случае использования у вас appliance продуктов с ключами Smart Account:
+                  ul
+                    li Заблокируйте для него доступ к&nbsp;ресурсу tools.cisco.com, переведя его в&nbsp;так называемый grace period.
+                    li У&nbsp;вас будет от&nbsp;30&nbsp;до&nbsp;90&nbsp;дней (в&nbsp;зависимости от&nbsp;типа продукта) для подбора аналога и&nbsp;перевода вашего сервера на&nbsp;другое решение.
+          .faq__element(data-accordion='element')
+            h3.faq__button(data-accordion='button')
+              span.faq__button-text Что будет с&nbsp;моим сервером Polycom (Poly), когда закончится сервисная поддержка?
+              +icon("icon-faq", "19", "19").faq__button-icon
+            .faq__content(data-accordion='content')
+              .faq__wrapper
+                .cascade
+                  ul
+                    li Вы&nbsp;не&nbsp;сможете приобрести новые лицензии Clarity или продлить сервисную поддержку.
+                    li Что будет с&nbsp;приобретенными ранее лицензиями Clarity, которые требуют доступ к&nbsp;облачному серверу лицензирования Polycom (Poly), пока достоверно не&nbsp;известно (компания еще официально не&nbsp;уведомила заказчиков).
+                    li Лицензии, которые были открыты на&nbsp;физических серверах без обязательного доступа к&nbsp;облачному серверу лицензирования, продолжат свою работу, но&nbsp;сервисная поддержка и&nbsp;апгрейд программного обеспечения будут недоступны.
+          .faq__element(data-accordion='element')
+            h3.faq__button(data-accordion='button')
+              span.faq__button-text Как сохранить инфраструктуру и&nbsp;оборудование?
+              +icon("icon-faq", "19", "19").faq__button-icon
+            .faq__content(data-accordion='content')
+              .faq__wrapper
+                .cascade
+                  ul
+                    li По&nbsp;возможности переведите оборудование Cisco и&nbsp;Polycom (Poly) на&nbsp;использование grace period (30-90 дней в&nbsp;зависимости от&nbsp;продукта).
+                    li В&nbsp;течение 30&nbsp;дней действия grace period обратитесь к&nbsp;специалистам компании Vinteo для получения плана перехода на&nbsp;отечественное решение и&nbsp;установите программный сервер ВКС Vinteo в&nbsp;режиме ПРОМОАКЦИИ.
+                    li По&nbsp;окончании grace period у&nbsp;оборудования Cisco и&nbsp;Polycom (Poly) полностью перейдите на&nbsp;решение ВКС Vinteo
+          .faq__element(data-accordion='element')
+            h3.faq__button(data-accordion='button')
+              span.faq__button-text Насколько сложно осуществить переход на&nbsp;решение Vinteo?
+              +icon("icon-faq", "19", "19").faq__button-icon
+            .faq__content(data-accordion='content')
+              .faq__wrapper
+                .cascade
+                  p При наличии достаточных серверных мощностей, переход на&nbsp;ВКС Vinteo занимает #[b от&nbsp;2-х часов до&nbsp;нескольких дней.]
+                  ol(type="A")
+                    li Выделите серверный ресурс в&nbsp;вашем ЦОД, используя калькулятор ресурсов (подробнее уточняйте в&nbsp;техподдержке Винтео).
+                    li Создайте #[a(rel="nofollow noopener noreferrer", target="_blank", href="https://wiki.vinteo.com/wiki/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%A1%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D0%B0_%D0%92%D0%9A%D0%A1_VINTEO") загрузочную&nbsp;флешку] для установки образа сервера.
+                    li Установите ПО&nbsp;сервера ВКС Vinteo с&nbsp;USB-флешки.
+                    li Пропишите IP-адрес.
+                    li В&nbsp;меню сервера ВКС Vinteo сгенерируйте файл запроса временных ключей на&nbsp;2000 часов и&nbsp;необходимый функционал сервера.
+                    li Полученный файл отправьте на&nbsp;support@vinteo.ru.
+                    li Загрузите присланный лицензионный файл и&nbsp;файл последнего патча download.vinteo.ru в&nbsp;меню сервера.
+                    li Наслаждайтесь качественным российским решением ВКС Vinteo.
+          .faq__element(data-accordion='element')
+            h3.faq__button(data-accordion='button')
+              span.faq__button-text Сколько времени займет миграция?
+              +icon("icon-faq", "19", "19").faq__button-icon
+            .faq__content(data-accordion='content')
+              .faq__wrapper
+                .cascade
+                  p От нескольких часов до нескольких недель:
+                  ul
+                    li Если вы&nbsp;располагаете необходимым серверным ресурсом и&nbsp;готовы предоставить специалистам компании Vinteo удаленный доступ для оказания технической помощи, то&nbsp;даже самая сложная инфраструктурная инсталляция занимает 2-4&nbsp;часа.
+                    li Если серверной платформы необходимой мощности у&nbsp;вас нет, то&nbsp;срок развертывания нового решения будет зависеть от&nbsp;сроков ее&nbsp;поставки&nbsp;&mdash; до&nbsp;8&nbsp;недель.
+          .faq__element(data-accordion='element')
+            h3.faq__button(data-accordion='button')
+              span.faq__button-text Можно&nbsp;ли самостоятельно осуществить миграцию?
+              +icon("icon-faq", "19", "19").faq__button-icon
+            .faq__content(data-accordion='content')
+              .faq__wrapper
+                .cascade
+                  p Да, самостоятельный переход с&nbsp;Cisco и&nbsp;Polycom (Poly) на&nbsp;ВКС Vinteo возможен, но&nbsp;вероятно займет немного больше времени, чем со&nbsp;специалистами Vinteo. Процесс миграции подробно описан на&nbsp;нашем сайте #[a(href="http://wiki.vinteo.com" target="_black") http://wiki.vinteo.com]
+        h2.faq__question.form-faq#form-faq Задать свой вопрос
+        +form()
+      .title.title--fwbold.questions__after-title
+        h3 Решение есть!

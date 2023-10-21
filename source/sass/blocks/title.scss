@@ -1,0 +1,76 @@
+.title {
+  margin-bottom: 50px;
+  color: $color-orient;
+
+  @include vp-1023 {
+    margin-bottom: 30px;
+  }
+
+  & h1,
+  & h2,
+  & h3 {
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 63px;
+    letter-spacing: -1px;
+    margin: 0;
+    color: inherit;
+    text-align: center;
+
+    @include vp-1023 {
+      font-size: 33px;
+      line-height: 38px;
+    }
+  }
+
+  &--small {
+    margin-bottom: 40px;
+
+    & h1,
+    & h2,
+    & h3 {
+      font-weight: 500;
+      font-size: 34px;
+
+      @include vp-1023 {
+        font-size: 28px;
+      }
+    }
+  }
+
+  &--fwbold {
+    margin-bottom: 40px;
+
+    & h1,
+    & h2,
+    & h3 {
+      font-weight: 700;
+    }
+  }
+
+  & p,
+  & span {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: inherit;
+    margin: 10px 0 0 0;
+    text-align: center;
+
+    @include vp-1023 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  & a {
+    color: inherit;
+    transition: opacity $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

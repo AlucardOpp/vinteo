@@ -1,0 +1,184 @@
+.footer {
+  position: relative;
+  padding: 20px 0 175px;
+
+  background-color: $color-transparent;
+
+  @include vp-1023 {
+    padding: 20px 0 120px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: end;
+
+    width: 100%;
+    height: 100%;
+
+    img {
+      height: 100%;
+      width: 101%;
+      max-width: 101%;
+
+      object-position: top;
+    }
+  }
+
+  &__grad {
+    position: relative;
+    margin-bottom: -2px;
+
+    height: 500px;
+
+    @include vp-1023 {
+      max-height: 444px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -55px;
+      left: 0;
+
+      width: 100%;
+      height: 60px;
+
+      background: linear-gradient(180deg, rgba(16,22,44,1) 6%, rgba(16, 22, 44, 0) 100%);
+    }
+
+    img {
+      height: 100%;
+
+      @include vp-767 {
+        width: 200%;
+        max-width: 200%;
+        margin-left: -50%;
+      }
+    }
+  }
+
+  &__city {
+    height: 200px;
+
+    background: rgba(16,22,44,1);
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__city,
+  &__grad {
+    width: 100%;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__logo {
+    margin: 163px auto 45px;
+
+    width: 359px;
+    height: 118px;
+
+    @include vp-1023 {
+      margin: 83px auto 30px;
+
+      width: 200px;
+      height: auto;
+    }
+  }
+
+  &__btn.btn {
+    margin: 0 auto 18px;
+
+    display: block;
+  }
+
+  &__socials-list {
+    margin: 0 auto;
+
+    padding: 0;
+
+    list-style: none;
+
+  }
+
+  &__socials-item a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: opacity $trans-default;
+
+    svg {
+      opacity: 0.6;
+    }
+
+    p {
+      margin: 0;
+
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 400;
+      color: $color-default-white;
+
+      @include vp-1023 {
+        font-weight: 500;
+      }
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__socials-icon {
+    margin-bottom: 12px;
+
+    display: flex;
+  }
+
+  &__dev {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 444px;
+    height: 91px;
+
+    transition: opacity $trans-default;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.steps {
+  margin-bottom: 150px;
+
+  @include vp-1023 {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    max-width: 454px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include vp-1023 {
+      max-width: 423px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0 0 64px 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 64px;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+      justify-items: center;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    @include vp-1023 {
+      max-width: 454px;
+      width: 100%;
+    }
+  }
+
+  &__item-number {
+    margin-right: 20px;
+    margin-top: 6px;
+
+    @include vp-1023 {
+      width: 31px;
+      margin-top: 4px;
+      margin-right: 10px;
+    }
+  }
+
+  &__item-title {
+    margin: 0 0 8px 0;
+    color: $color-black-russian;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+  }
+
+  &__text {
+    margin: 0;
+    color: $color-nepal-2;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}

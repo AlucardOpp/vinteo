@@ -1,0 +1,9 @@
+.questions {
+  &__after-title {
+    margin-bottom: 86px;
+
+    @include vp-767 {
+      margin-bottom: 50px;
+    }
+  }
+}

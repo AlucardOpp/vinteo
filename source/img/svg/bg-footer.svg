@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" width="1721.844" height="665.672" viewBox="0 0 1721.844 665.672">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="1" r="0.516" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2b6584"/>
+      <stop offset="0.734" stop-color="#101b33"/>
+      <stop offset="1" stop-color="#0f162c"/>
+    </radialGradient>
+  </defs>
+  <path id="Контур_144" data-name="Контур 144" d="M0,730H1721.844v299.549l-859.49,366.123L0,1029.549Z" transform="translate(1721.844 1395.672) rotate(180)" fill="url(#radial-gradient)"/>
+</svg>
